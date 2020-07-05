@@ -10,6 +10,7 @@ import { from } from 'rxjs';
 export class StudentComponent implements OnInit {
    
   trainingList;
+  studentList;
   constructor(private httpClient:HttpClient) { }
    
   ngOnInit(): void {
@@ -19,6 +20,15 @@ export class StudentComponent implements OnInit {
      },err=>{
        console.log(err)
      })
+  }
+
+  onGetStudent(f){
+    this.httpClient.get("http://localhost:8088/trainings/"+f.id+"/students")
+    .subscribe(data =>{
+        this.studentList = data;
+    },err=>{
+      console.log(err)
+    })
   }
 
 }

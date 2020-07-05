@@ -1,16 +1,25 @@
+<div class="container" *ngIf="trainingList">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+         <div class="panel-body">
+            <span *ngFor="let t of trainingList._embedded.trainings">
+                 <button (click)="onGetStudent(t)" class="btn btn-primary">{{t.name}}</button>
+            </span>
+            <p></p>
+            <table class="table">
+              <tr>
+                <th>firstName</th>
+                <th>secondName</th>
+                <th>date</th>
+              </tr>
+               <tr *ngFor="let student of  studentList._embedded.students">
+                  <td>{{student.firstName}}</td>
+                  <td>{{student.lastName}}</td>
+                  <td>{{student.dateNaissance}}</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+  </div>
 
-<table *ngIf = "trainingList" class="table table-striped">
-  
-  <tr>
-   <th>ID</th>
-   <th>Name</th>
-   <th>Duration</th>
- </tr>
-
- <tr *ngFor="let f of trainingList._embedded.trainings">
-  <td>{{f.id}}</td>
-  <td>{{f.name}}</td>
-  <td>{{f.duration}}</td>
- </tr>
- 
-</table>
+</div>
