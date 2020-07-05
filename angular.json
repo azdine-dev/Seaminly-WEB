@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "seaminly-web"
+    }
+  },
+  "defaultProject": "seaminly-web",
+  "cli": {
+    "analytics": false
+  }
 }
