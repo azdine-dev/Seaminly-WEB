@@ -1,6 +1,5 @@
 # SeaminlyWeb
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+ This is THE web client for this project 
 
 ## Development server
 
