@@ -1,7 +1,20 @@
-<table>
+
+<div class = "container">
+
+</div>
+
+<table *ngIf = "trainingList" class="table table-striped">
+  
   <tr>
-    <th>ID</th><th>Nom</th>
-  </tr>
+   <th>ID</th>
+   <th>Name</th>
+   <th>Duration</th>
+ </tr>
 
-
+ <tr *ngFor="let f of trainingList._embedded.trainings">
+  <td>{{f.id}}</td>
+  <td>{{f.name}}</td>
+  <td>{{f.duration}}</td>
+ </tr>
+ 
 </table>
