@@ -1,5 +1,5 @@
 # SeaminlyWeb
- This is THE web client for this project 
+ This is the web client for This project https://github.com/azdine-dev/Seaminly.git
 
 ## Development server
 
